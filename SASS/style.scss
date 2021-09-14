@@ -1,0 +1,287 @@
+/*/variables/*/
+$color-sombreado: rgba(0, 0, 0, 0.5);
+$fondo: rgba(134, 134, 134, 0.8);
+$color-fuente-oscuro: rgb(216, 216, 216);
+$color-fuente: white;
+$color-bordes: white;
+$color-background-general: rgb(149, 41, 49);
+$color-background-header-footer: black;
+$mode: night;
+
+/*/mixins/*/
+@mixin imagen-fondo($heigth, $margin-top, $background-repeat, $ackground-size, $overflow) {
+    height: $heigth;
+    margin-top: $margin-top;
+    background-repeat: $background-repeat;
+    background-size: $ackground-size;
+    overflow: $overflow;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    /*/operaciones/*/
+    @if ($mode == night){
+        color: white;
+        background-color: rgb(149, 41, 49);
+    } 
+    @else if ($mode == light){
+        color: black;
+        background-color: rgb(41, 115, 149);
+    }
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left; 
+    text-transform: none;
+    line-height: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+/*/operacion bucle/*/
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-size: 60px - (8*$i)
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+/*/header/*/
+.header{
+        /*/operacion/*/
+        @if ($mode == night) {
+            color: white;
+            background-color: black;
+        } 
+        @else if ($mode == light){
+            color: black;
+            background-color: white;
+        }
+    .nav{
+        width: 100vw;
+        border-bottom: solid 2px $color-bordes;
+        a{
+            @if ($mode == night) {
+                color: white;
+            } 
+            @else if ($mode == light){
+                color: black;
+            }
+            text-decoration: none;
+        }
+    }
+}
+
+/*/footer/*/
+.caja-footer{
+            /*/operacion/*/
+            @if ($mode == night) {
+                background-color: black;
+            } 
+            @else if ($mode == light){
+                background-color: white;
+            }
+
+    .btn{
+        background-color: white;
+    }
+}
+
+
+/*/carrousel/*/
+.inner--imagen{
+    height: 40vw;
+}
+
+
+/*/portadas/*/
+.portadas{
+    .portadas__item{
+        margin: 20px;
+        text-decoration: none;
+        color: $color-fuente;
+        @include imagen-fondo(30vw, 30px, none, cover, hide);
+        .portadas__item--texto{
+            text-align: center;
+            font-size: 4rem;
+            background-color: $color-sombreado;
+            color: $color-fuente-oscuro;
+        }
+        .portadas__item--texto:hover{
+            color: $color-fuente;
+        }
+        .portadas__item--subtexto{
+            text-align: center;
+            font-size: 2rem;
+            background-color: $color-sombreado;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10rem;
+            position: relative;
+            bottom: -70%;
+            color: $color-fuente-oscuro;
+        }
+        .portadas__item--subtexto:hover{
+            color: $color-fuente;
+        }
+    }
+    .portadas__item--1{
+        background-image: url(../multimedia/adornos/producto4.JPEG);
+    }
+    .portadas__item--2{
+        background-image: url(../multimedia/funcionales/producto5.jpg);
+    }
+    .portadas__item--3{
+        background-image: url(../multimedia/personajes/producto6.JPG);
+        
+    }
+    
+    @media only screen and (max-width: 991px){
+        .portadas__item{
+            height: 50vw;
+        }
+    }
+    @media only screen and (max-width: 575px){
+        .portadas__item{
+            height: 120vw;
+        }
+    }
+}
+
+/*/novedades/*/
+@each $portada in marshal1, marshal2, marshal3, marshal4, marshal5{
+    .#{$portada} {
+        height: 20.8vw;
+        background-image: url("../multimedia/personajes/marshal/#{$portada}.JPEG");
+        margin-top: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        filter: brightness(70%);
+        transition: all 0.5s;
+    }
+    .#{$portada}:hover {
+        filter: brightness(100%);
+        transform: scale(1.05 , 1.05);
+        }
+    @media only screen and (max-width: 991px){
+        .#{$portada} {
+            height: 41.6vw;
+        }
+        .#{$portada}:hover {
+            height: 43vw;
+        }
+    }
+    @media only screen and (max-width: 575px){
+        .#{$portada}{
+            height: 125vw;
+        }
+        .#{$portada}:hover{
+            height: 128vw;
+        }
+    }
+}
+
+/*/------------------------ productos-----------------------/*/
+.costado{
+    background-color: $fondo;
+    height: 100vw;
+    a{
+        color: $color-fuente;
+    }
+    a:hover{
+        color: $color-fuente-oscuro;
+    }
+}
+/*/adornos/*/
+.adornos__titulo{
+    text-align: center;
+}
+.adornos{ 
+    .adornos__item{
+        background-color: $fondo;
+        padding: 5px;
+        margin: 20px;
+        border: solid 2px black;
+        transition: all 1s;
+        
+        .item__nombre{
+            color:black;
+
+        }
+        .item__precio{
+            color:black;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .adornos__item:hover{
+        transform: scale(1.1,1.1);
+    }
+}
+@media only screen and (max-width: 575px){
+    .costado{
+        display: none;
+    }
+}
+
+
+/*/------------------------ contacto -----------------------/*/
+.contacto{
+    margin-top: 5vw;
+}
+
+/*/__------------------------ materiales -----------------------/*/
+@media only screen and (max-width: 575px){
+    .ABS__info--abajo{
+        display: none;
+    }
+}
+
+/*/------------------------ carrito -----------------------/*/
+
+.contenedor__selector{
+    height: 3vw;
+}
+
+/*/------------------------ error 404 -----------------------/*/
+.pagina-404{
+    background: rgb(149, 41, 49);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-404{
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 1px 10px rgba(131, 95, 95, 0.3);
+    border-radius: 5px;
+    line-height: 1.7;
+    color: #434343;
+}
+.boton-inicio{
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: rgb(149, 41, 49);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
