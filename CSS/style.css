@@ -290,8 +290,30 @@ a {
     display: none; } }
 
 /*/------------------------ carrito -----------------------/*/
-.contenedor__selector {
-  height: 3vw; }
+.lista__contenedor {
+  font-size: 3rem; }
+  .lista__contenedor .contenedor__imagen {
+    box-shadow: 5px 5px 20px #2c2c2c; }
+  .lista__contenedor .contenedor__selector {
+    color: black;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(134, 134, 134, 0.8);
+    border-radius: 3px;
+    box-shadow: 5px 5px 20px #2c2c2c; }
+    .lista__contenedor .contenedor__selector .contenedor__unidades {
+      background-color: white;
+      width: 40%; }
+    .lista__contenedor .contenedor__selector .contenedor__modificador {
+      width: 30%; }
+
+@media only screen and (max-width: 991px) {
+  .lista__contenedor {
+    font-size: 2rem; }
+    .lista__contenedor .contenedor__nombre {
+      display: none; } }
 
 /*/------------------------ error 404 -----------------------/*/
 .pagina-404 {

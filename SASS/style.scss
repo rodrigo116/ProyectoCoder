@@ -3,6 +3,7 @@ $color-sombreado: rgba(0, 0, 0, 0.5);
 $fondo: rgba(134, 134, 134, 0.8);
 $color-fuente-oscuro: rgb(216, 216, 216);
 $color-fuente: white;
+$color-fuente2: black;
 $color-bordes: white;
 $color-background-general: rgb(149, 41, 49);
 $color-background-header-footer: black;
@@ -257,8 +258,39 @@ a{
 
 /*/------------------------ carrito -----------------------/*/
 
-.contenedor__selector{
-    height: 3vw;
+.lista__contenedor{
+    font-size: 3rem;
+    .contenedor__imagen{
+        box-shadow: 5px 5px 20px rgb(44, 44, 44);
+    }
+    .contenedor__selector{
+        color: $color-fuente2;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $fondo;
+        border-radius: 3px;
+        box-shadow: 5px 5px 20px rgb(44, 44, 44);
+        .contenedor__unidades{
+            background-color: white;
+            width: 40%;
+        }
+        .contenedor__modificador{
+            width: 30%;
+        }
+    }
+
+}
+@media only screen and (max-width: 991px){
+    .lista__contenedor{
+        font-size: 2rem;
+    
+        .contenedor__nombre{
+            display: none;
+        }
+    }
+    
 }
 
 /*/------------------------ error 404 -----------------------/*/
