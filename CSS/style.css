@@ -1,4 +1,5 @@
 /*/variables/*/
+/*/colocar night para modo nocturno o light para modo diurno/*/
 /*/mixins/*/
 * {
   margin: 0;
@@ -253,9 +254,6 @@ a {
   text-align: center; }
 
 .adornos .adornos__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background-color: rgba(134, 134, 134, 0.8);
   padding: 5px;
   margin: 20px;
@@ -263,14 +261,16 @@ a {
   transition: all 1s;
   box-shadow: 5px 5px 20px #2c2c2c;
   border-radius: 10px; }
-  .adornos .adornos__item .item__nombre {
-    color: black; }
-  .adornos .adornos__item .item__precio {
-    color: black; }
+  .adornos .adornos__item .adornos__vinculo {
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
   .adornos .adornos__item img {
     width: 100%;
     border-radius: 10px; }
-  .adornos .adornos__item .item__boton {
+  .adornos .adornos__item .adornos__boton {
     box-shadow: 3px 3px 10px #1f1f1f; }
 
 .adornos .adornos__item:hover {

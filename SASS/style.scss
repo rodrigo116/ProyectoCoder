@@ -6,7 +6,7 @@ $color-fuente: white;
 $color-bordes: white;
 $color-background-general: rgb(149, 41, 49);
 $color-background-header-footer: black;
-$mode: night;
+$mode: night; /*/colocar night para modo nocturno o light para modo diurno/*/
 
 /*/mixins/*/
 @mixin imagen-fondo($heigth, $margin-top, $background-repeat, $ackground-size, $overflow) {
@@ -210,9 +210,6 @@ a{
 }
 .adornos{ 
     .adornos__item{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
         background-color: $fondo;
         padding: 5px;
         margin: 20px;
@@ -220,17 +217,18 @@ a{
         transition: all 1s;
         box-shadow: 5px 5px 20px rgb(44, 44, 44);
         border-radius: 10px;
-        .item__nombre{
-            color:black;
-        }
-        .item__precio{
-            color:black;
+        .adornos__vinculo{
+            color: black;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         img{
             width: 100%;
             border-radius: 10px;
         }
-        .item__boton{
+        .adornos__boton{
             box-shadow: 3px 3px 10px rgb(31, 31, 31);
         }
     }
