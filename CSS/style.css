@@ -12,6 +12,7 @@ body {
   /*/operaciones/*/
   color: white;
   background-color: #952931;
+  margin: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
@@ -40,16 +41,25 @@ a {
   text-decoration: none; }
 
 /*/header/*/
-.header {
+header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
   /*/operacion/*/
   color: white;
   background-color: black; }
-  .header .nav {
+  header .header--titulo {
+    width: 100vw;
+    text-align: center; }
+  header .nav {
     width: 100vw;
     border-bottom: solid 2px white; }
-    .header .nav a {
+    header .nav a {
       color: white;
       text-decoration: none; }
+    header .nav a:hover {
+      color: #d8d8d8;
+      text-decoration: underline; }
 
 /*/footer/*/
 .caja-footer {
@@ -60,13 +70,17 @@ a {
 
 /*/carrousel/*/
 .inner--imagen {
-  height: 40vw; }
+  height: 40vw;
+  border: solid 2px white; }
 
 /*/portadas/*/
 .portadas .portadas__item {
   margin: 20px;
   text-decoration: none;
   color: white;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px #2c2c2c;
   height: 30vw;
   margin-top: 30px;
   background-repeat: none;
@@ -110,6 +124,10 @@ a {
     height: 120vw; } }
 
 /*/novedades/*/
+.novedades {
+  margin-top: 20px;
+  margin-bottom: 50px; }
+
 .marshal1 {
   height: 20.8vw;
   background-image: url("../multimedia/personajes/marshal/marshal1.JPEG");
@@ -117,12 +135,15 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  filter: brightness(70%);
-  transition: all 0.5s; }
+  filter: brightness(80%);
+  transition: all 0.5s;
+  border-radius: 10%;
+  box-shadow: 5px 5px 20px #2c2c2c; }
 
 .marshal1:hover {
   filter: brightness(100%);
-  transform: scale(1.05, 1.05); }
+  transform: scale(1.05, 1.05);
+  box-shadow: none; }
 
 @media only screen and (max-width: 991px) {
   .marshal1 {
@@ -143,12 +164,15 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  filter: brightness(70%);
-  transition: all 0.5s; }
+  filter: brightness(80%);
+  transition: all 0.5s;
+  border-radius: 10%;
+  box-shadow: 5px 5px 20px #2c2c2c; }
 
 .marshal2:hover {
   filter: brightness(100%);
-  transform: scale(1.05, 1.05); }
+  transform: scale(1.05, 1.05);
+  box-shadow: none; }
 
 @media only screen and (max-width: 991px) {
   .marshal2 {
@@ -169,12 +193,15 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  filter: brightness(70%);
-  transition: all 0.5s; }
+  filter: brightness(80%);
+  transition: all 0.5s;
+  border-radius: 10%;
+  box-shadow: 5px 5px 20px #2c2c2c; }
 
 .marshal3:hover {
   filter: brightness(100%);
-  transform: scale(1.05, 1.05); }
+  transform: scale(1.05, 1.05);
+  box-shadow: none; }
 
 @media only screen and (max-width: 991px) {
   .marshal3 {
@@ -195,12 +222,15 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  filter: brightness(70%);
-  transition: all 0.5s; }
+  filter: brightness(80%);
+  transition: all 0.5s;
+  border-radius: 10%;
+  box-shadow: 5px 5px 20px #2c2c2c; }
 
 .marshal4:hover {
   filter: brightness(100%);
-  transform: scale(1.05, 1.05); }
+  transform: scale(1.05, 1.05);
+  box-shadow: none; }
 
 @media only screen and (max-width: 991px) {
   .marshal4 {
@@ -221,12 +251,15 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  filter: brightness(70%);
-  transition: all 0.5s; }
+  filter: brightness(80%);
+  transition: all 0.5s;
+  border-radius: 10%;
+  box-shadow: 5px 5px 20px #2c2c2c; }
 
 .marshal5:hover {
   filter: brightness(100%);
-  transform: scale(1.05, 1.05); }
+  transform: scale(1.05, 1.05);
+  box-shadow: none; }
 
 @media only screen and (max-width: 991px) {
   .marshal5 {

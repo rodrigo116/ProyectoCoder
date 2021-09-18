@@ -4,9 +4,11 @@ $fondo: rgba(134, 134, 134, 0.8);
 $color-fuente-oscuro: rgb(216, 216, 216);
 $color-fuente: white;
 $color-fuente2: black;
+$color-fuente-oscuro2: rgb(19, 19, 19);
 $color-bordes: white;
 $color-background-general: rgb(149, 41, 49);
 $color-background-header-footer: black;
+$sombra: 5px 5px 20px rgb(44, 44, 44);
 $mode: night; /*/colocar night para modo nocturno o light para modo diurno/*/
 
 /*/mixins/*/
@@ -36,6 +38,7 @@ body{
         color: black;
         background-color: rgb(41, 115, 149);
     }
+    margin: 0;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;
@@ -59,27 +62,47 @@ a{
 }
 
 /*/header/*/
-.header{
-        /*/operacion/*/
-        @if ($mode == night) {
-            color: white;
-            background-color: black;
-        } 
-        @else if ($mode == light){
-            color: black;
-            background-color: white;
-        }
+header{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    /*/operacion/*/
+    @if ($mode == night) {
+        color: $color-fuente;
+        background-color: $color-fuente2;
+    } 
+    @else if ($mode == light){
+        color: $color-fuente2;
+        background-color: $color-fuente;
+    }
+    .header--titulo{
+        width: 100vw;
+        text-align: center;
+
+
+    }
     .nav{
         width: 100vw;
         border-bottom: solid 2px $color-bordes;
         a{
             @if ($mode == night) {
-                color: white;
+                color: $color-fuente;
             } 
             @else if ($mode == light){
-                color: black;
+                color: $color-fuente2;
             }
             text-decoration: none;
+        }
+        a:hover{
+            @if ($mode == night) {
+                color: $color-fuente-oscuro;
+            } 
+            @else if ($mode == light){
+                color: $color-fuente-oscuro2;
+            }
+            text-decoration: underline;
+            
         }
     }
 }
@@ -103,6 +126,7 @@ a{
 /*/carrousel/*/
 .inner--imagen{
     height: 40vw;
+    border: solid 2px $color-bordes;
 }
 
 
@@ -112,6 +136,9 @@ a{
         margin: 20px;
         text-decoration: none;
         color: $color-fuente;
+        border-radius: 10%;
+        overflow: hidden;
+        box-shadow: $sombra;
         @include imagen-fondo(30vw, 30px, none, cover, hide);
         .portadas__item--texto{
             text-align: center;
@@ -161,6 +188,10 @@ a{
 }
 
 /*/novedades/*/
+.novedades{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
 @each $portada in marshal1, marshal2, marshal3, marshal4, marshal5{
     .#{$portada} {
         height: 20.8vw;
@@ -169,12 +200,15 @@ a{
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-        filter: brightness(70%);
+        filter: brightness(80%);
         transition: all 0.5s;
+        border-radius: 10%;
+        box-shadow: $sombra;
     }
     .#{$portada}:hover {
         filter: brightness(100%);
         transform: scale(1.05 , 1.05);
+        box-shadow: none;
         }
     @media only screen and (max-width: 991px){
         .#{$portada} {
@@ -216,7 +250,7 @@ a{
         margin: 20px;
         border: solid 2px black;
         transition: all 1s;
-        box-shadow: 5px 5px 20px rgb(44, 44, 44);
+        box-shadow: $sombra;
         border-radius: 10px;
         .adornos__vinculo{
             color: black;
@@ -229,7 +263,7 @@ a{
             width: 100%;
             border-radius: 10px;
         }
-        .adornos__boton{
+        .adornos__boton{ 
             box-shadow: 3px 3px 10px rgb(31, 31, 31);
         }
     }
@@ -261,7 +295,7 @@ a{
 .lista__contenedor{
     font-size: 3rem;
     .contenedor__imagen{
-        box-shadow: 5px 5px 20px rgb(44, 44, 44);
+        box-shadow: $sombra;
     }
     .contenedor__selector{
         color: $color-fuente2;
@@ -272,7 +306,7 @@ a{
         align-items: center;
         background-color: $fondo;
         border-radius: 3px;
-        box-shadow: 5px 5px 20px rgb(44, 44, 44);
+        box-shadow: $sombra;
         .contenedor__unidades{
             background-color: white;
             width: 40%;
@@ -317,7 +351,7 @@ a{
     max-width: 400px;
     background-color: white;
     padding: 20px;
-    box-shadow: 5px 5px 20px rgb(44, 44, 44);
+    box-shadow: $sombra;
     border-radius: 5px;
     line-height: 1.7;
     color: #434343;
