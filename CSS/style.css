@@ -51,6 +51,8 @@ header {
   header .header--titulo {
     width: 100vw;
     text-align: center; }
+    header .header--titulo a {
+      color: white; }
   header .nav {
     width: 100vw;
     border-bottom: solid 2px white; }
@@ -152,10 +154,18 @@ header {
     height: 43vw; } }
 
 @media only screen and (max-width: 575px) {
-  .marshal1 {
+  .marshal3 {
     height: 125vw; }
-  .marshal1:hover {
-    height: 128vw; } }
+  .marshal3:hover {
+    height: 128vw; }
+  .marshal1 {
+    display: none; }
+  .marshal2 {
+    display: none; }
+  .marshal4 {
+    display: none; }
+  .marshal5 {
+    display: none; } }
 
 .marshal2 {
   height: 20.8vw;
@@ -181,10 +191,18 @@ header {
     height: 43vw; } }
 
 @media only screen and (max-width: 575px) {
-  .marshal2 {
+  .marshal3 {
     height: 125vw; }
-  .marshal2:hover {
-    height: 128vw; } }
+  .marshal3:hover {
+    height: 128vw; }
+  .marshal1 {
+    display: none; }
+  .marshal2 {
+    display: none; }
+  .marshal4 {
+    display: none; }
+  .marshal5 {
+    display: none; } }
 
 .marshal3 {
   height: 20.8vw;
@@ -213,7 +231,15 @@ header {
   .marshal3 {
     height: 125vw; }
   .marshal3:hover {
-    height: 128vw; } }
+    height: 128vw; }
+  .marshal1 {
+    display: none; }
+  .marshal2 {
+    display: none; }
+  .marshal4 {
+    display: none; }
+  .marshal5 {
+    display: none; } }
 
 .marshal4 {
   height: 20.8vw;
@@ -239,10 +265,18 @@ header {
     height: 43vw; } }
 
 @media only screen and (max-width: 575px) {
-  .marshal4 {
+  .marshal3 {
     height: 125vw; }
-  .marshal4:hover {
-    height: 128vw; } }
+  .marshal3:hover {
+    height: 128vw; }
+  .marshal1 {
+    display: none; }
+  .marshal2 {
+    display: none; }
+  .marshal4 {
+    display: none; }
+  .marshal5 {
+    display: none; } }
 
 .marshal5 {
   height: 20.8vw;
@@ -268,10 +302,18 @@ header {
     height: 43vw; } }
 
 @media only screen and (max-width: 575px) {
-  .marshal5 {
+  .marshal3 {
     height: 125vw; }
-  .marshal5:hover {
-    height: 128vw; } }
+  .marshal3:hover {
+    height: 128vw; }
+  .marshal1 {
+    display: none; }
+  .marshal2 {
+    display: none; }
+  .marshal4 {
+    display: none; }
+  .marshal5 {
+    display: none; } }
 
 /*/------------------------ productos-----------------------/*/
 .costado {

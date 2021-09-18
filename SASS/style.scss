@@ -36,7 +36,7 @@ body{
     } 
     @else if ($mode == light){
         color: black;
-        background-color: rgb(41, 115, 149);
+        background-color: rgb(187, 38, 48);
     }
     margin: 0;
     font-style: normal;
@@ -79,6 +79,14 @@ header{
     .header--titulo{
         width: 100vw;
         text-align: center;
+        a{
+            @if ($mode == night) {
+                color: $color-fuente;
+            } 
+            @else if ($mode == light){
+                color: $color-fuente2;
+            }
+        }
 
 
     }
@@ -219,11 +227,23 @@ header{
         }
     }
     @media only screen and (max-width: 575px){
-        .#{$portada}{
+        .marshal3{
             height: 125vw;
         }
-        .#{$portada}:hover{
+        .marshal3:hover{
             height: 128vw;
+        }
+        .marshal1{
+            display: none;
+        }
+        .marshal2{
+            display: none;
+        }
+        .marshal4{
+            display: none;
+        }
+        .marshal5{
+            display: none;
         }
     }
 }
