@@ -230,16 +230,37 @@ header{
 
 /*/------------------------ productos-----------------------/*/
 .costado{
+    overflow: hidden;
     background-color: $fondo;
     height: 100vw;
+    margin-top: 100px;
+    font-size: 4rem;
     a{
+        font-size: 3rem;
         color: $color-fuente;
     }
     a:hover{
         color: $color-fuente-oscuro;
     }
 }
+@media only screen and (max-width: 991px){
+    .costado{
+        font-size: 3rem;
+        a{
+            font-size: 2rem;
+        }
+    }
+}
+@media only screen and (max-width: 575px){
+    .costado{
+        display: none;
+    }
+}
+
 /*/adornos/*/
+.secciones{
+    margin-top: 100px;
+}
 .adornos__titulo{
     text-align: center;
 }
@@ -268,20 +289,18 @@ header{
         }
     }
     .adornos__item:hover{
-        transform: scale(1.1,1.1);
-    }
-}
-@media only screen and (max-width: 575px){
-    .costado{
-        display: none;
+        transform: scale(1.05,1.05);
     }
 }
 
+
+/*/------------------------ views -----------------------/*/
+.titulo{
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
 
 /*/------------------------ contacto -----------------------/*/
-.contacto{
-    margin-top: 5vw;
-}
 
 /*/__------------------------ materiales -----------------------/*/
 @media only screen and (max-width: 575px){
