@@ -37,28 +37,23 @@ h3 {
 h4 {
   font-size: 28px; }
 
-a {
-  text-decoration: none; }
-
 /*/header/*/
 header {
   position: fixed;
   top: 0;
   z-index: 10;
   /*/operacion/*/
-  color: white;
   background-color: black; }
+  header .header__enlace {
+    color: white;
+    text-decoration: none;
+    padding: 10px; }
   header .header--titulo {
     width: 100vw;
     text-align: center; }
-    header .header--titulo a {
-      color: white; }
   header .nav {
     width: 100vw;
     border-bottom: solid 2px white; }
-    header .nav a {
-      color: white;
-      text-decoration: none; }
     header .nav a:hover {
       color: #d8d8d8;
       text-decoration: underline; }
@@ -76,53 +71,112 @@ header {
   border: solid 2px white; }
 
 /*/portadas/*/
-.portadas .portadas__item {
+.portadas .portada1 {
+  background-image: url("../multimedia/portadas/portada1.JPEG");
   margin: 20px;
   text-decoration: none;
-  color: white;
+  color: #d8d8d8;
   border-radius: 10%;
   overflow: hidden;
   box-shadow: 5px 5px 20px #2c2c2c;
+  text-align: center;
   height: 30vw;
   margin-top: 30px;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
-  overflow: hide; }
-  .portadas .portadas__item .portadas__item--texto {
-    text-align: center;
-    font-size: 4rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #d8d8d8; }
-  .portadas .portadas__item .portadas__item--texto:hover {
+  overflow: hidden; }
+  .portadas .portada1 .portadas__texto {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .portadas .portada1 .portadas__texto:hover {
     color: white; }
-  .portadas .portadas__item .portadas__item--subtexto {
-    text-align: center;
+  .portadas .portada1 h3 {
+    font-size: 4rem; }
+  .portadas .portada1 h4 {
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
     margin-left: auto;
     margin-right: auto;
-    width: 10rem;
+    width: 100px;
     position: relative;
-    bottom: -70%;
-    color: #d8d8d8; }
-  .portadas .portadas__item .portadas__item--subtexto:hover {
-    color: white; }
-
-.portadas .portadas__item--1 {
-  background-image: url(../multimedia/adornos/producto4.JPEG); }
-
-.portadas .portadas__item--2 {
-  background-image: url(../multimedia/funcionales/producto5.jpg); }
-
-.portadas .portadas__item--3 {
-  background-image: url(../multimedia/personajes/producto6.JPG); }
+    bottom: -70%; }
 
 @media only screen and (max-width: 991px) {
-  .portadas .portadas__item {
+  .portadas .portada1 {
     height: 50vw; } }
 
 @media only screen and (max-width: 575px) {
-  .portadas .portadas__item {
+  .portadas .portada1 {
+    height: 120vw; } }
+
+.portadas .portada2 {
+  background-image: url("../multimedia/portadas/portada2.JPEG");
+  margin: 20px;
+  text-decoration: none;
+  color: #d8d8d8;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px #2c2c2c;
+  text-align: center;
+  height: 30vw;
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .portadas .portada2 .portadas__texto {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .portadas .portada2 .portadas__texto:hover {
+    color: white; }
+  .portadas .portada2 h3 {
+    font-size: 4rem; }
+  .portadas .portada2 h4 {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    position: relative;
+    bottom: -70%; }
+
+@media only screen and (max-width: 991px) {
+  .portadas .portada2 {
+    height: 50vw; } }
+
+@media only screen and (max-width: 575px) {
+  .portadas .portada2 {
+    height: 120vw; } }
+
+.portadas .portada3 {
+  background-image: url("../multimedia/portadas/portada3.JPEG");
+  margin: 20px;
+  text-decoration: none;
+  color: #d8d8d8;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px #2c2c2c;
+  text-align: center;
+  height: 30vw;
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .portadas .portada3 .portadas__texto {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .portadas .portada3 .portadas__texto:hover {
+    color: white; }
+  .portadas .portada3 h3 {
+    font-size: 4rem; }
+  .portadas .portada3 h4 {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    position: relative;
+    bottom: -70%; }
+
+@media only screen and (max-width: 991px) {
+  .portadas .portada3 {
+    height: 50vw; } }
+
+@media only screen and (max-width: 575px) {
+  .portadas .portada3 {
     height: 120vw; } }
 
 /*/novedades/*/
@@ -132,11 +186,11 @@ header {
 
 .marshal1 {
   height: 20.8vw;
-  background-image: url("../multimedia/personajes/marshal/marshal1.JPEG");
   margin-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url("../multimedia/personajes/marshal/marshal1.JPEG");
   filter: brightness(80%);
   transition: all 0.5s;
   border-radius: 10%;
@@ -151,29 +205,26 @@ header {
   .marshal1 {
     height: 41.6vw; }
   .marshal1:hover {
-    height: 43vw; } }
-
-@media only screen and (max-width: 575px) {
-  .marshal3 {
-    height: 125vw; }
-  .marshal3:hover {
-    height: 128vw; }
-  .marshal1 {
-    display: none; }
-  .marshal2 {
-    display: none; }
-  .marshal4 {
-    display: none; }
+    height: 43vw; }
   .marshal5 {
     display: none; } }
 
+@media only screen and (max-width: 575px) {
+  .marshal1 {
+    display: none; }
+  .marshal3 {
+    height: 125vw;
+    display: block; }
+  .marshal3:hover {
+    height: 128vw; } }
+
 .marshal2 {
   height: 20.8vw;
-  background-image: url("../multimedia/personajes/marshal/marshal2.JPEG");
   margin-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url("../multimedia/personajes/marshal/marshal2.JPEG");
   filter: brightness(80%);
   transition: all 0.5s;
   border-radius: 10%;
@@ -188,29 +239,26 @@ header {
   .marshal2 {
     height: 41.6vw; }
   .marshal2:hover {
-    height: 43vw; } }
-
-@media only screen and (max-width: 575px) {
-  .marshal3 {
-    height: 125vw; }
-  .marshal3:hover {
-    height: 128vw; }
-  .marshal1 {
-    display: none; }
-  .marshal2 {
-    display: none; }
-  .marshal4 {
-    display: none; }
+    height: 43vw; }
   .marshal5 {
     display: none; } }
 
+@media only screen and (max-width: 575px) {
+  .marshal2 {
+    display: none; }
+  .marshal3 {
+    height: 125vw;
+    display: block; }
+  .marshal3:hover {
+    height: 128vw; } }
+
 .marshal3 {
   height: 20.8vw;
-  background-image: url("../multimedia/personajes/marshal/marshal3.JPEG");
   margin-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url("../multimedia/personajes/marshal/marshal3.JPEG");
   filter: brightness(80%);
   transition: all 0.5s;
   border-radius: 10%;
@@ -225,29 +273,26 @@ header {
   .marshal3 {
     height: 41.6vw; }
   .marshal3:hover {
-    height: 43vw; } }
-
-@media only screen and (max-width: 575px) {
-  .marshal3 {
-    height: 125vw; }
-  .marshal3:hover {
-    height: 128vw; }
-  .marshal1 {
-    display: none; }
-  .marshal2 {
-    display: none; }
-  .marshal4 {
-    display: none; }
+    height: 43vw; }
   .marshal5 {
     display: none; } }
 
+@media only screen and (max-width: 575px) {
+  .marshal3 {
+    display: none; }
+  .marshal3 {
+    height: 125vw;
+    display: block; }
+  .marshal3:hover {
+    height: 128vw; } }
+
 .marshal4 {
   height: 20.8vw;
-  background-image: url("../multimedia/personajes/marshal/marshal4.JPEG");
   margin-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url("../multimedia/personajes/marshal/marshal4.JPEG");
   filter: brightness(80%);
   transition: all 0.5s;
   border-radius: 10%;
@@ -262,29 +307,26 @@ header {
   .marshal4 {
     height: 41.6vw; }
   .marshal4:hover {
-    height: 43vw; } }
-
-@media only screen and (max-width: 575px) {
-  .marshal3 {
-    height: 125vw; }
-  .marshal3:hover {
-    height: 128vw; }
-  .marshal1 {
-    display: none; }
-  .marshal2 {
-    display: none; }
-  .marshal4 {
-    display: none; }
+    height: 43vw; }
   .marshal5 {
     display: none; } }
 
+@media only screen and (max-width: 575px) {
+  .marshal4 {
+    display: none; }
+  .marshal3 {
+    height: 125vw;
+    display: block; }
+  .marshal3:hover {
+    height: 128vw; } }
+
 .marshal5 {
   height: 20.8vw;
-  background-image: url("../multimedia/personajes/marshal/marshal5.JPEG");
   margin-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  background-image: url("../multimedia/personajes/marshal/marshal5.JPEG");
   filter: brightness(80%);
   transition: all 0.5s;
   border-radius: 10%;
@@ -299,21 +341,18 @@ header {
   .marshal5 {
     height: 41.6vw; }
   .marshal5:hover {
-    height: 43vw; } }
-
-@media only screen and (max-width: 575px) {
-  .marshal3 {
-    height: 125vw; }
-  .marshal3:hover {
-    height: 128vw; }
-  .marshal1 {
-    display: none; }
-  .marshal2 {
-    display: none; }
-  .marshal4 {
-    display: none; }
+    height: 43vw; }
   .marshal5 {
     display: none; } }
+
+@media only screen and (max-width: 575px) {
+  .marshal5 {
+    display: none; }
+  .marshal3 {
+    height: 125vw;
+    display: block; }
+  .marshal3:hover {
+    height: 128vw; } }
 
 /*/------------------------ productos-----------------------/*/
 .costado {

@@ -7,16 +7,19 @@ $color-fuente2: black;
 $color-fuente-oscuro2: rgb(19, 19, 19);
 $color-bordes: white;
 $color-background-general: rgb(149, 41, 49);
+$color-background-general2: rgb(187, 38, 48);
 $color-background-header-footer: black;
 $sombra: 5px 5px 20px rgb(44, 44, 44);
+$medida-sm: 575px;
+$medida-lg: 991px;
 $mode: night; /*/colocar night para modo nocturno o light para modo diurno/*/
 
 /*/mixins/*/
-@mixin imagen-fondo($heigth, $margin-top, $background-repeat, $ackground-size, $overflow) {
+@mixin imagen-fondo($heigth, $margin-top, $background-repeat, $background-size, $overflow) {
     height: $heigth;
     margin-top: $margin-top;
     background-repeat: $background-repeat;
-    background-size: $ackground-size;
+    background-size: $background-size;
     overflow: $overflow;
     
 }
@@ -31,12 +34,12 @@ html{
 body{
     /*/operaciones/*/
     @if ($mode == night){
-        color: white;
-        background-color: rgb(149, 41, 49);
+        color: $color-fuente;
+        background-color: $color-background-general;
     } 
     @else if ($mode == light){
-        color: black;
-        background-color: rgb(187, 38, 48);
+        color: $color-fuente2;
+        background-color: $color-background-general2;
     }
     margin: 0;
     font-style: normal;
@@ -57,10 +60,6 @@ body{
     }
 }
 
-a{
-    text-decoration: none;
-}
-
 /*/header/*/
 header{
     position: fixed;
@@ -69,48 +68,39 @@ header{
 
     /*/operacion/*/
     @if ($mode == night) {
-        color: $color-fuente;
         background-color: $color-fuente2;
     } 
     @else if ($mode == light){
-        color: $color-fuente2;
         background-color: $color-fuente;
     }
+    .header__enlace{
+        @if ($mode == night) {
+            color: $color-fuente;
+        } 
+        @else if ($mode == light){
+            color: $color-fuente2;
+        }
+        text-decoration: none;
+        padding: 10px;
+    }
+    
     .header--titulo{
         width: 100vw;
         text-align: center;
-        a{
-            @if ($mode == night) {
-                color: $color-fuente;
-            } 
-            @else if ($mode == light){
-                color: $color-fuente2;
-            }
-        }
 
 
     }
     .nav{
         width: 100vw;
         border-bottom: solid 2px $color-bordes;
-        a{
-            @if ($mode == night) {
-                color: $color-fuente;
-            } 
-            @else if ($mode == light){
-                color: $color-fuente2;
-            }
-            text-decoration: none;
-        }
         a:hover{
             @if ($mode == night) {
                 color: $color-fuente-oscuro;
-            } 
+            }
             @else if ($mode == light){
                 color: $color-fuente-oscuro2;
             }
             text-decoration: underline;
-            
         }
     }
 }
@@ -119,10 +109,10 @@ header{
 .caja-footer{
             /*/operacion/*/
             @if ($mode == night) {
-                background-color: black;
+                background-color: $color-fuente2;
             } 
             @else if ($mode == light){
-                background-color: white;
+                background-color: $color-fuente;
             }
 
     .btn{
@@ -140,57 +130,44 @@ header{
 
 /*/portadas/*/
 .portadas{
-    .portadas__item{
-        margin: 20px;
-        text-decoration: none;
-        color: $color-fuente;
-        border-radius: 10%;
-        overflow: hidden;
-        box-shadow: $sombra;
-        @include imagen-fondo(30vw, 30px, none, cover, hide);
-        .portadas__item--texto{
-            text-align: center;
-            font-size: 4rem;
-            background-color: $color-sombreado;
+    @each $portada in portada1, portada2, portada3{
+        .#{$portada} {
+            background-image: url("../multimedia/portadas/#{$portada}.JPEG");
+            margin: 20px;
+            text-decoration: none;
             color: $color-fuente-oscuro;
-        }
-        .portadas__item--texto:hover{
-            color: $color-fuente;
-        }
-        .portadas__item--subtexto{
+            border-radius: 10%;
+            overflow: hidden;
+            box-shadow: $sombra;
             text-align: center;
-            font-size: 2rem;
-            background-color: $color-sombreado;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10rem;
-            position: relative;
-            bottom: -70%;
-            color: $color-fuente-oscuro;
+            @include imagen-fondo(30vw, 30px, no-repeat, cover, hidden);
+            .portadas__texto{
+                background-color: $color-sombreado;
+            }
+            .portadas__texto:hover{
+                color: $color-fuente;
+            }
+            h3{
+                font-size: 4rem;
+            }
+            h4{
+                font-size: 2rem;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100px;
+                position: relative;
+                bottom: -70%;
+            }
         }
-        .portadas__item--subtexto:hover{
-            color: $color-fuente;
+        @media only screen and (max-width: $medida-lg){
+            .#{$portada}{
+                height: 50vw;
+            }
         }
-    }
-    .portadas__item--1{
-        background-image: url(../multimedia/adornos/producto4.JPEG);
-    }
-    .portadas__item--2{
-        background-image: url(../multimedia/funcionales/producto5.jpg);
-    }
-    .portadas__item--3{
-        background-image: url(../multimedia/personajes/producto6.JPG);
-        
-    }
-    
-    @media only screen and (max-width: 991px){
-        .portadas__item{
-            height: 50vw;
-        }
-    }
-    @media only screen and (max-width: 575px){
-        .portadas__item{
-            height: 120vw;
+        @media only screen and (max-width: $medida-sm){
+            .#{$portada}{
+                height: 120vw;
+            }
         }
     }
 }
@@ -200,50 +177,41 @@ header{
     margin-top: 20px;
     margin-bottom: 50px;
 }
-@each $portada in marshal1, marshal2, marshal3, marshal4, marshal5{
-    .#{$portada} {
-        height: 20.8vw;
-        background-image: url("../multimedia/personajes/marshal/#{$portada}.JPEG");
-        margin-top: 50px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
+@each $novedad in marshal1, marshal2, marshal3, marshal4, marshal5{
+    .#{$novedad} {
+        @include imagen-fondo(20.8vw, 50px, no-repeat, cover, hidden);
+        background-image: url("../multimedia/personajes/marshal/#{$novedad}.JPEG");
         filter: brightness(80%);
         transition: all 0.5s;
         border-radius: 10%;
         box-shadow: $sombra;
     }
-    .#{$portada}:hover {
+    .#{$novedad}:hover {
         filter: brightness(100%);
         transform: scale(1.05 , 1.05);
         box-shadow: none;
         }
-    @media only screen and (max-width: 991px){
-        .#{$portada} {
+    @media only screen and (max-width: $medida-lg){
+        .#{$novedad} {
             height: 41.6vw;
         }
-        .#{$portada}:hover {
+        .#{$novedad}:hover {
             height: 43vw;
-        }
-    }
-    @media only screen and (max-width: 575px){
-        .marshal3{
-            height: 125vw;
-        }
-        .marshal3:hover{
-            height: 128vw;
-        }
-        .marshal1{
-            display: none;
-        }
-        .marshal2{
-            display: none;
-        }
-        .marshal4{
-            display: none;
         }
         .marshal5{
             display: none;
+        }
+    }
+    @media only screen and (max-width: $medida-sm){
+        .#{$novedad} {
+            display: none;
+        }
+        .marshal3{
+            height: 125vw;
+            display: block;
+        }
+        .marshal3:hover{
+            height: 128vw;
         }
     }
 }
@@ -263,7 +231,7 @@ header{
         color: $color-fuente-oscuro;
     }
 }
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: $medida-lg){
     .costado{
         font-size: 3rem;
         a{
@@ -271,7 +239,7 @@ header{
         }
     }
 }
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: $medida-sm){
     .costado{
         display: none;
     }
@@ -323,7 +291,7 @@ header{
 /*/------------------------ contacto -----------------------/*/
 
 /*/__------------------------ materiales -----------------------/*/
-@media only screen and (max-width: 575px){
+@media only screen and (max-width: $medida-sm){
     .ABS__info--abajo{
         display: none;
     }
@@ -364,7 +332,7 @@ header{
     }
 
 }
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: $medida-lg){
     .lista__contenedor{
         font-size: 2rem;
     
