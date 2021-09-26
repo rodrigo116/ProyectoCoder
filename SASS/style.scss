@@ -93,6 +93,7 @@ header{
     .nav{
         width: 100vw;
         border-bottom: solid 2px $color-bordes;
+        padding-bottom: 10px;
         a:hover{
             @if ($mode == night) {
                 color: $color-fuente-oscuro;
@@ -107,13 +108,15 @@ header{
 
 /*/footer/*/
 .caja-footer{
-            /*/operacion/*/
-            @if ($mode == night) {
-                background-color: $color-fuente2;
-            } 
-            @else if ($mode == light){
-                background-color: $color-fuente;
-            }
+    position: relative;
+    z-index: 10;
+    /*/operacion/*/
+    @if ($mode == night) {
+        background-color: $color-fuente2;
+    } 
+    @else if ($mode == light){
+        background-color: $color-fuente;
+    }
 
     .btn{
         background-color: white;
@@ -216,77 +219,94 @@ header{
     }
 }
 
-/*/------------------------ productos-----------------------/*/
-.costado{
-    overflow: hidden;
-    background-color: $fondo;
-    height: 100vw;
-    margin-top: 100px;
-    font-size: 4rem;
-    a{
-        font-size: 3rem;
-        color: $color-fuente;
-    }
-    a:hover{
-        color: $color-fuente-oscuro;
-    }
-}
-@media only screen and (max-width: $medida-lg){
-    .costado{
-        font-size: 3rem;
-        a{
-            font-size: 2rem;
-        }
-    }
-}
-@media only screen and (max-width: $medida-sm){
-    .costado{
-        display: none;
-    }
-}
-
-/*/adornos/*/
-.secciones{
-    margin-top: 100px;
-}
-.adornos__titulo{
+/*/------------------------ views -----------------------/*/
+.titulo{
+    margin-top: 150px;
+    margin-bottom: 20px;
     text-align: center;
 }
-.adornos{ 
-    .adornos__item{
+
+/*/------------------------ productos-----------------------/*/
+
+
+/*/adornos/*/
+.productos{
+    margin-top: 100px;
+    a{
+        text-decoration: none;
+    }
+    .costado{
+        overflow: hidden;
         background-color: $fondo;
-        padding: 5px;
-        margin: 20px;
-        border: solid 2px black;
-        transition: all 1s;
-        box-shadow: $sombra;
-        border-radius: 10px;
-        .adornos__vinculo{
+        height: 100vh;
+        font-size: 2.8vw;
+        padding-left: 10px;
+        position: fixed;
+        a{
+            font-size: 2vw;
+            color: $color-fuente;
+        }
+        a:hover{
+            color: $color-fuente-oscuro;
+        }
+    }
+
+    .secciones{
+        margin-left: 16.5vw;
+    }
+
+    @media only screen and (max-width: $medida-lg){
+        .costado{
+            font-size: 4vw;
+            a{
+                font-size: 3vw;
+            }
+        }
+        .secciones{
+            margin-left: 25vw;
+        }
+    }
+    @media only screen and (max-width: $medida-sm){
+        .costado{
+            display: none;
+        }
+        .secciones{
+            margin-left: 0;
+        }
+    }
+    .cards{ 
+        .cards__item{
+            background-color: $fondo;
+            padding: 5px;
+            margin: 20px;
+            border: solid 2px black;
+            transition: all 1s;
+            box-shadow: $sombra;
+            border-radius: 10px;
             color: black;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            img{
+                width: 100%;
+                border-radius: 10px;
+            }
+            .cards__boton{ 
+                box-shadow: 3px 3px 10px rgb(31, 31, 31);
+            }
+            .cards__boton:active{
+                color: $color-fuente2;
+                background-color: $color-fuente;
+            }
         }
-        img{
-            width: 100%;
-            border-radius: 10px;
+        .cards__item:hover{
+            transform: scale(1.05,1.05);
         }
-        .adornos__boton{ 
-            box-shadow: 3px 3px 10px rgb(31, 31, 31);
-        }
-    }
-    .adornos__item:hover{
-        transform: scale(1.05,1.05);
     }
 }
 
 
-/*/------------------------ views -----------------------/*/
-.titulo{
-    margin-top: 130px;
-    margin-bottom: 30px;
-}
 
 /*/------------------------ contacto -----------------------/*/
 

@@ -12,100 +12,166 @@
 </head>
 <body>
     <header>
-        <h1 class="header header--titulo"><a href="../index.html">RO3D</a></h1>
+        <h1 class="header header--titulo">
+            <a class="header__enlace" href="../Index.html">RO3D</a>
+        </h1>
         <nav class="header header--nav">
             <ul class="nav nav-lista1 d-flex flex-wrap justify-content-center">
-                <li class="nav-item"><a href="../index.html" class="colorLetra nav-link" aria-current="page">Inicio</a></li>
-                <li class="nav-item"><a href="../views/Productos.html" class="colorLetra nav-link">Productos</a></li>
-                <li class="nav-item"><a href="../views/Contacto.html" class="colorLetra nav-link">Contacto</a></li>
-                <li class="nav-item"><a href="../views/Materiales.html" class="colorLetra nav-link">Materiales</a></li>
-                <li class="nav-item"><a href="../views/Carrito.html" class="colorLetra nav-link">Carrito</a></li>
+                <li class="nav-item">
+                    <a class="header__enlace" href="../index.html" class="colorLetra nav-link" aria-current="page">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="header__enlace" href="./Productos.html" class="colorLetra nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="header__enlace" href="./Contacto.html" class="colorLetra nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="header__enlace" href="./Materiales.html" class="colorLetra nav-link">Materiales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="header__enlace" href="./Carrito.html" class="colorLetra nav-link">Carrito</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-<div class="container-fluid d-flex m-0 p-0 ">
+<section class="productos container-fluid d-flex p-0 ">
     <aside class="costado col-sm-3 col-lg-2">
-        <p class="costado__categorias">Categorias</p>
-        <p><a href="../404.html">Adornos</a></p>
-        <p><a href="../404.html">Funcionales</a></p>
-        <p><a href="../404.html">Personajes</a></p>
-        <p><a href="../404.html">Nuevos</a></p>
+        <p class="costado__categorias">Categorías</p>
+        <p>
+            <a href="#adornos">Adornos</a>
+        </p>
+        <p>
+            <a href="#funcionales">Funcionales</a>
+        </p>
+        <p>
+            <a href="../404.html">Personajes</a>
+        </p>
+        <p>
+            <a href="../404.html">Nuevos</a>
+        </p>
     </aside>
-    <div class="secciones col-12 col-sm-9 col-lg-10">
-        <section class="adornos d-flex flex-wrap justify-content-evenly">
-
-            <div class="adornos__titulo col-12 mt-5">
-                <h2>Productos</h2>
-            </div>
-
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/cuadro-agujero-negro.jpg" alt="FOTO CUADRO AGUJERO NEGRO">
-                    <h4 class="adornos__nombre">CUADRO AGUJERO NEGRO</h4>
-                    <p class="adornos__precio">$510.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
-                </a>
-            </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/cuadro-bull-dog.jpg" alt="FOTO CUADRO PITBULL">
-                    <h4 class="adornos__nombre">CUADRO PITBULL</h4>
-                    <p class="adornos__precio">$410.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
-                </a>
+    <main class="secciones col-12 col-sm-9 col-lg-10">
+        <div class="titulo col-12 mt-5">
+            <h2>
+                <strong>
+                    Productos
+                </strong>
+            </h2>
         </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/cuadro-cara.jpg" alt="FOTO CUADRO CARA">
-                    <h4 class="adornos__nombre">CUADRO CARA</h4>
-                    <p class="adornos__precio">$600.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
-                </a>
-        </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/cuadro-colibri.jpg" alt="FOTO CUADRO COLIBRI">
-                    <h4 class="adornos__nombre">CUADRO COLIBRI</h4>
-                    <p class="adornos__precio">500.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
-                </a>
+        <section id="adornos" class="cards d-flex flex-wrap justify-content-evenly">
+            <div class="titulo col-12 mt-5" >
+                <h2>
+                    Adornos
+                </h2>
             </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/cuadro-love-amor.jpg" alt="FOTO CUADRO LOVE-AMOR">
-                    <h4 class="adornos__nombre">CUADRO LOVE-AMOR</h4>
-                    <p class="adornos__precio">$600.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-agujero-negro.jpg" alt="FOTO CUADRO AGUJERO NEGRO">
                 </a>
+                    <h4 class="cards__nombre">CUADRO AGUJERO NEGRO</h4>
+                    <p class="cards__precio">$510.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
             </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/LOVE-NY.jpg" alt="FOTO LOVE - NY">
-                    <h4 class="adornos__nombre">LOVE - NY</h4>
-                    <p class="adornos__precio">680.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-bull-dog.jpg" alt="FOTO CUADRO PITBULL">
                 </a>
+                    <h4 class="cards__nombre">CUADRO PITBULL</h4>
+                    <p class="cards__precio">$410.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
             </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/panteras.JPEG" alt="FOTO PANTERA-GLOW">
-                    <h4 class="adornos__nombre">PANTERA-GLOW</h4>
-                    <p class="adornos__precio">$500.00</p>
-                    <button type="button"  class="adornos__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
-                </a>
+                <div class="cards__item col-11 col-sm-5 col-lg-3">
+                    <a class="cards__vinculo" href="../404.html">
+                        <img class="cards__foto" src="../multimedia/adornos/cuadro-cara.jpg" alt="FOTO CUADRO CARA">
+                    </a>
+                        <h4 class="cards__nombre">CUADRO CARA</h4>
+                        <p class="cards__precio">$600.00</p>
+                        <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
             </div>
-            <div class="adornos__item col-11 col-sm-5 col-lg-3">
-                <a class="adornos__vinculo" href="../404.html">
-                    <img class="adornos__foto" src="../multimedia/adornos/t-rex.jpg" alt="FOTO T-REX">
-                    <h4 class="adornos__nombre">T-REX</h4>
-                    <p class="adornos__precio">510.00</p>
-                    <button type="button" class="adornos__boton btn btn-dark btn-lg" >AGREGAR AL CARRITO</button>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/panteras.JPEG" alt="FOTO PANTERA-GLOW">
                 </a>
+                    <h4 class="cards__nombre">PANTERA-GLOW</h4>
+                    <p class="cards__precio">$500.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-colibri.jpg" alt="FOTO CUADRO COLIBRI">
+                </a>
+                    <h4 class="cards__nombre">CUADRO COLIBRI</h4>
+                    <p class="cards__precio">500.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/t-rex.jpg" alt="FOTO T-REX">
+                </a>
+                    <h4 class="cards__nombre">T-REX</h4>
+                    <p class="cards__precio">510.00</p>
+                    <button type="button" class="cards__boton btn btn-dark btn-lg" >AGREGAR AL CARRITO</button>
             </div>
         </section>
-    </div>
-</div>
+        <section id="adornos" class="cards d-flex flex-wrap justify-content-evenly">
+            <div class="titulo col-12 mt-5" >
+                <h2>
+                    Funcionales
+                </h2>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/funcionales/producto5.jpg" alt="FOTO CUADRO AGUJERO NEGRO">
+                </a>
+                    <h4 class="cards__nombre">CUADRO AGUJERO NEGRO</h4>
+                    <p class="cards__precio">$510.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-bull-dog.jpg" alt="FOTO CUADRO PITBULL">
+                </a>
+                    <h4 class="cards__nombre">CUADRO PITBULL</h4>
+                    <p class="cards__precio">$410.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+        </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-cara.jpg" alt="FOTO CUADRO CARA">
+                </a>
+                    <h4 class="cards__nombre">CUADRO CARA</h4>
+                    <p class="cards__precio">$600.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+        </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-colibri.jpg" alt="FOTO CUADRO COLIBRI">
+                </a>
+                    <h4 class="cards__nombre">CUADRO COLIBRI</h4>
+                    <p class="cards__precio">500.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/cuadro-love-amor.jpg" alt="FOTO CUADRO LOVE-AMOR">
+                </a>
+                    <h4 class="cards__nombre">CUADRO LOVE-AMOR</h4>
+                    <p class="cards__precio">$600.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+            <div class="cards__item col-11 col-sm-5 col-lg-3">
+                <a class="cards__vinculo" href="../404.html">
+                    <img class="cards__foto" src="../multimedia/adornos/LOVE-NY.jpg" alt="FOTO LOVE - NY">
+                </a>
+                    <h4 class="cards__nombre">LOVE - NY</h4>
+                    <p class="cards__precio">680.00</p>
+                    <button type="button"  class="cards__boton btn btn-dark btn-lg">AGREGAR AL CARRITO</button>
+            </div>
+        </section>
+    </main>
+</section>
     <footer class="footer container-fluid  px-0  text-center">
         <div class="caja-footer p-4 pb-0">
             <section class="mb-0 altoFooter">
