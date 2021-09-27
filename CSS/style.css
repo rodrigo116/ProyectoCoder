@@ -409,7 +409,8 @@ header {
     justify-content: space-between; }
     .productos .cards .cards__item img {
       width: 100%;
-      border-radius: 10px; }
+      border-radius: 10px;
+      margin-bottom: 5PX; }
     .productos .cards .cards__item .cards__boton {
       box-shadow: 3px 3px 10px #1f1f1f; }
     .productos .cards .cards__item .cards__boton:active {
