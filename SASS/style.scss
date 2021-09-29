@@ -311,9 +311,61 @@ header{
 /*/------------------------ contacto -----------------------/*/
 
 /*/__------------------------ materiales -----------------------/*/
+.materiales{
+    display: grid;
+    width: 90vw;
+    height: 61.8vw;
+    margin: 5vw;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 17.6vw 17.6vw 17.6vw;
+    grid-row-gap: 4.5vw;
+    grid-column-gap: 5%;
+    grid-template-areas: 
+        "infoPla infoPla fotoPla"
+        "fotoAbs infoAbs infoAbs"
+        "infoPetg infoPetg fotoPetg"
+    ;
+}
+
+.item{
+    padding: 20px;
+    background-color: $fondo;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: $sombra;
+    .material__titulo{
+        text-align: center;
+        font-size: 2.5vw;
+    }
+    .material__texto{
+        font-size: 1.8vw;
+    }
+    .material__foto{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+@each $material in infoPla, fotoPla, infoAbs, fotoAbs, infoPetg, fotoPetg{
+    .#{$material} {
+        grid-area: #{$material};
+    }
+}
+
 @media only screen and (max-width: $medida-sm){
-    .ABS__info--abajo{
-        display: none;
+    .materiales{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .material__titulo{
+            text-align: center;
+            font-size: 3.8vw;
+        }
+        .material__texto{
+            font-size: 2.8vw;
+        }
     }
 }
 

@@ -420,9 +420,62 @@ header {
 
 /*/------------------------ contacto -----------------------/*/
 /*/__------------------------ materiales -----------------------/*/
+.materiales {
+  display: grid;
+  width: 90vw;
+  height: 61.8vw;
+  margin: 5vw;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 17.6vw 17.6vw 17.6vw;
+  grid-row-gap: 4.5vw;
+  grid-column-gap: 5%;
+  grid-template-areas: "infoPla infoPla fotoPla" "fotoAbs infoAbs infoAbs" "infoPetg infoPetg fotoPetg"; }
+
+.item {
+  padding: 20px;
+  background-color: rgba(134, 134, 134, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 20px #2c2c2c; }
+  .item .material__titulo {
+    text-align: center;
+    font-size: 2.5vw; }
+  .item .material__texto {
+    font-size: 1.8vw; }
+  .item .material__foto {
+    width: 100%;
+    border-radius: 10px; }
+
+.infoPla {
+  grid-area: infoPla; }
+
+.fotoPla {
+  grid-area: fotoPla; }
+
+.infoAbs {
+  grid-area: infoAbs; }
+
+.fotoAbs {
+  grid-area: fotoAbs; }
+
+.infoPetg {
+  grid-area: infoPetg; }
+
+.fotoPetg {
+  grid-area: fotoPetg; }
+
 @media only screen and (max-width: 575px) {
-  .ABS__info--abajo {
-    display: none; } }
+  .materiales {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+    .materiales .material__titulo {
+      text-align: center;
+      font-size: 3.8vw; }
+    .materiales .material__texto {
+      font-size: 2.8vw; } }
 
 /*/------------------------ carrito -----------------------/*/
 .lista__contenedor {
