@@ -291,6 +291,7 @@ header{
             img{
                 width: 100%;
                 border-radius: 10px;
+                margin-bottom: 5PX;
             }
             .cards__boton{ 
                 box-shadow: 3px 3px 10px rgb(31, 31, 31);
@@ -370,50 +371,66 @@ header{
 }
 
 /*/------------------------ carrito -----------------------/*/
-
-.lista__contenedor{
-    font-size: 3rem;
-    .contenedor__imagen{
-        box-shadow: $sombra;
-    }
-    .contenedor__selector{
-        color: $color-fuente2;
-        height: 40px;
-        text-align: center;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: $fondo;
-        border-radius: 3px;
-        box-shadow: $sombra;
-        .contenedor__unidades{
-            background-color: white;
-            width: 40%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contenedor__modificador{
-            width: 30%;
-        }
-        .contenedor__modificador:hover{
-            background-color: rgba(167, 167, 167, 0.8);
-            transform: scale(1.05,1.05);
-        }
-    }
-
-}
-@media only screen and (max-width: $medida-lg){
+.lista{
     .lista__contenedor{
-        font-size: 2rem;
-    
-        .contenedor__nombre{
-            display: none;
+        font-size: 3rem;
+        .contenedor__imagen{
+            border-radius: 5px;
+            box-shadow: $sombra;
+        }
+        .contenedor__selector{
+            color: $color-fuente2;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: $fondo;
+            border-radius: 3px;
+            box-shadow: $sombra;
+            .contenedor__unidades{
+                background-color: white;
+                width: 40%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .contenedor__modificador{
+                width: 30%;
+                cursor: pointer;
+            }
+            .contenedor__modificador:hover{
+                background-color: rgba(167, 167, 167, 0.8);
+            }
         }
     }
-    
+    .boton__finalizar{
+        width: 250px;
+        height: 50px;
+        color: $color-fuente;
+        background-color: $color-fuente2;
+        border: none;
+        border-radius: 10px;
+        box-shadow: $sombra;
+    }
+    .boton__finalizar:active{
+        background-color: $fondo;
+        border: solid 2px black;
+        
+    }
+    @media only screen and (max-width: $medida-lg){
+        .lista__contenedor{
+            font-size: 2rem;
+        
+            .contenedor__nombre{
+                display: none;
+            }
+        }
+        
+    }
 }
+
 
 /*/------------------------ error 404 -----------------------/*/
 .pagina-404{
