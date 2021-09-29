@@ -35,53 +35,46 @@
             </ul>
         </nav>
     </header>
-    <div class="titulo">
-        <h2 class="text-center mt-5"><strong>Materiales</strong></h2>
+    <div class="materiales__titulo titulo">
+        <h2><strong>Materiales</strong></h2>
     </div>
-    
-
-    <!-- PLA -->
-    <section class="PLA container d-flex flex-wrap justify-content-evenly mt-3 mb-3">
-        <div class="PLA__info col-12 col-sm-5 col-lg-7 d-flex flex-wrap justify-content-evenly align-content-center">
-            <h3 class="PLA__titulo"><strong>PLA</strong></h3>
-            <p class="PLA__texto"> El ácido poliláctico (PLA) es un polímero biodegradable que puede producirse a partir del ácido láctico, que puede 
-                fermentarse a partir de cultivos como el maíz. Esto lo convierte en un candidato ideal para su uso en ciertas áreas 
+    <main class="materiales">
+        <!-- PLA -->
+        <div class="item infoPla">
+            <h3 class="material__titulo"><strong>PLA</strong></h3>
+            <p class="material__texto">El ácido poliláctico (PLA) es un polímero biodegradable que puede producirse a partir del ácido láctico, 
+                que puede fermentarse a partir de cultivos como el maíz. Esto lo convierte en un candidato ideal para su uso en ciertas áreas 
                 del mundo ricas en energía y pobres en dinero.
             </p>
         </div>
-        <img class="PLA__foto col-12 col-sm-7 col-lg-3 rounded-3" src="../multimedia/rolloPLA.jpg" alt="Foto rollo de PLA">
-    </section>
-
-    <!-- ABS -->
-    <section class="ABS container d-flex flex-wrap justify-content-evenly mt-3 mb-3">
-        <div class="ABS__info col-12 col-sm-5 col-lg-7 d-flex flex-wrap justify-content-evenly align-content-center">
-            <h3 class="ABS__titulo"><strong>ABS</strong></h3>
-            <p class="ABS__texto">El acrilonitrilo butadieno estireno (ABS) lo que es un polímero termoplástico 
-                común usado normalmente para el moldeado en impresoras 3D por inyección. Es un plástico a base de aceite que 
-                es fuerte y resistente, pero no es tan ecológico como el PLA debido a su composición de plástico a base de aceite.
+        <div class="item fotoPla">
+            <img class="material__foto" src="../multimedia/piezasPLA.JPEG" alt="Foto rollo de PLA">
+        </div>
+        <!-- ABS -->
+        <div class="item infoAbs">
+            <h3 class="material__titulo"><strong>ABS</strong></h3>
+            <p class="material__texto">El acrilonitrilo butadieno estireno (ABS) es un polímero termoplástico,
+                usado normalmente para la fabricacion de piezas mecánicas, ya que es un plástico fuerte, resistente y facil de mecanizar,
+                pero no es tan ecológico como el PLA ya que es un rerivado del petróleo.
             </p>
         </div>
-        <img class="ABS__foto col-12 col-sm-7 col-lg-3 rounded-3" src="../multimedia/rolloABS.jfif" alt="Foto rollo de ABS">
-
-    </section>
-
-    <!-- PET-G -->
-    <section class="PET-G container d-flex flex-wrap justify-content-evenly mt-3 mb-3">
-        <div class="PET-G__info col-12 col-sm-5 col-lg-7 d-flex flex-wrap justify-content-evenly align-content-center">
-            <h3 class="PET-G__titulo"><strong>PET-G</strong></h3>
-            <p class="PET-G__texto"> El Tereftalato de polietileno (PET) es el plástico más usado en el mundo: puedes encontrarlo 
-                en botellas, envases para alimentación, fibras textiles… Es un material transparente, con muy buena resistencia 
-                química y apto para uso alimentario.
+        <div class="item fotoAbs">
+            <img class="material__foto" src="../multimedia/piezaABS.JPEG" alt="Foto rollo de ABS">
+        </div>
+        <!-- PET-G -->
+        <div class="item infoPetg">
+            <h3 class="material__titulo"><strong>PET-G</strong></h3>
+            <p class="material__texto">El PET-G es el famoso tereftalato de polietileno (PET) que encontramos en las botellas de 
+                plástico o productos de almacenamiento alimenticio, con la diferencia que se le adiciona glicol, de esta modificacion 
+                resulta en un plástico más duradero, menos quebradizo, más claro y más fácil de usar.
             </p>
         </div>
-        <img class="PET-G__foto col-12 col-sm-7 col-lg-3 rounded-3" src="../multimedia/rolloPETG.jpg" alt="Foto rollo de PET-G">
-    </section>
+        <div class="item fotoPetg">
+            <img class="material__foto" src="../multimedia/piezaPETG.JPEG" alt="Foto rollo de PET-G">
+        </div>
 
 
-
-
-
-
+    </main>
 
     <footer class="footer container-fluid  px-0 text-center">
         <div class="caja-footer p-4 pb-0">
